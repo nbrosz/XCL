@@ -1,0 +1,20 @@
+<program>
+<let array = {1, 2, 3, 4, 5, 0 : 10} />
+<let x = 0 />
+<out "Current array values:\n" />
+<loop x lt 10>
+<out array[x] /><out "\n" />
+<let x = x + 1 />
+</loop>
+<loop x gt 0>
+<let y = x - 1 />
+<out "Insert a value for array[" /><out y /><out "]: " />
+<in array[y] />
+<let x = y />
+</loop>
+<out "Current array values:\n" />
+<loop x lt 10>
+<out array[x] /><out "\n" />
+<let x = x + 1 />
+</loop>
+</program>

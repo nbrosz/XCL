@@ -1,0 +1,11 @@
+<PROGRAM>
+<LET x = true />
+<LET y = false />
+<OUT "x is true and y is false\n" />
+
+<!-- Unfortunately, the language doesn't support variable stand-in for boolean values due to reduce errors -->
+<OUT "x v y is " /><LOGIC><BRANCH x = true v y = true ><OUT "true\n" /></BRANCH><BRANCH><OUT "false\n" /></BRANCH></LOGIC>
+<OUT "x ^ y is " /><LOGIC><BRANCH x = true ^ y = true ><OUT "true\n" /></BRANCH><BRANCH><OUT "false\n" /></BRANCH></LOGIC>
+<OUT "~x v y is " /><LOGIC><BRANCH ~(x = true) v y = true ><OUT "true\n" /></BRANCH><BRANCH><OUT "false\n" /></BRANCH></LOGIC>
+<OUT "x ^ ~y is " /><LOGIC><BRANCH x = true v ~(y = true) ><OUT "true\n" /></BRANCH><BRANCH><OUT "false\n" /></BRANCH></LOGIC>
+</PROGRAM>

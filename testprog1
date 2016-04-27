@@ -1,0 +1,47 @@
+<!-- Calculator Program -->
+<program>
+<let total = 0.0 />
+<let x = 0 />
+<loop x gte 0 ^ x lte 7>
+<out "Current value: " />
+<out total />
+<out "\n" />
+<out "Select your function (0 = +, 1 = -, 2 = *, 3 = /, 4 = //, 5 = %, 6 = **, 7 = clear) or -1 to quit.\n" />
+<in x />
+<logic>
+<branch x lt 0 v x gt 7>
+<out "Thanks for using!\n" />
+</branch>
+<branch>
+<logic>
+<branch x = 0><out "\taddition\n" /></branch>
+<branch x = 1><out "\tsubtraction\n" /></branch>
+<branch x = 2><out "\tmultiplication\n" /></branch>
+<branch x = 3><out "\tdivision\n" /></branch>
+<branch x = 4><out "\tint division\n" /></branch>
+<branch x = 5><out "\tmodulus\n" /></branch>
+<branch x = 6><out "\tpowers\n" /></branch>
+<branch x = 7><out "\tclear\n" /></branch>
+</logic>
+<let y = 0.0 />
+<logic>
+<branch x lte 6> <!-- all options but clear -->
+<out "Enter a value to perform the function with.\n" />
+<in y />
+<logic>
+<branch x = 0><out "\t+ " /><out "\n" /><let total = total + y /></branch>
+<branch x = 1><out "\t- " /><let total = total - y /></branch>
+<branch x = 2><out "\t* " /><let total = total * y /></branch>
+<branch x = 3><out "\t/ " /><let total = total / y /></branch>
+<branch x = 4><out "\t// " /><let total = total // y /></branch>
+<branch x = 5><out "\t% " /><let total = total % y /></branch>
+<branch x = 6><out "\t** " /><let total = total ** y /></branch>
+</logic>
+<out y /><out "\n" />
+</branch>
+<branch><let total = 0 /></branch> <!-- clear option -->
+</logic>
+</branch>
+</logic>
+</loop>
+</program>
