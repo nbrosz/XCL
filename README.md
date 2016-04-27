@@ -1,5 +1,6 @@
 XCL by Nic Brosz
 Spring, 2016
+https://youtu.be/20Nr72PMOdY
 
 Compiling and Using XCL:
 1) Run make
